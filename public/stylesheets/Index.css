@@ -1,0 +1,81 @@
+body {
+  background-color: #FFCCCB; /* Fundo rosa clarinho */
+  padding: 20px;
+  font-family: 'Arial', sans-serif; /* Fonte mais agradável */
+  font-size: 16px; /* Tamanho da fonte */
+  color: #333; /* Cor da fonte */
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+h1 {
+  font-size: 2em; /* Tamanho da fonte do título */
+  font-weight: bold; /* Peso da fonte do título */
+  color: #444; /* Cor da fonte do título */
+}
+
+p {
+  font-size: 1.2em; /* Tamanho da fonte do parágrafo */
+  color: #555; /* Cor da fonte do parágrafo */
+}
+
+a {
+  color: #00B7FF;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold; /* Peso da fonte dos botões */
+  border: none;
+  cursor: pointer;
+  border-radius: 10px; /* Bordas arredondadas */
+}
+
+#button1 {
+  background-color: #4CAF50; /* Botão esquerdo verde */
+  color: white;
+}
+
+#button2 {
+  background-color: #F44336; /* Botão direito vermelho */
+  color: white;
+}
+
+#gif-container {
+  margin-top: 20px;
+}
+
+.text-grow {
+  font-size: 2em; /* Aumenta o tamanho do texto */
+  transition: font-size 0.5s ease; /* Adiciona uma transição suave */
+}
+
+/* Regras CSS responsivas */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  #gif-container {
+    margin-top: 10px;
+  }
+
+  .text-grow {
+    font-size: 1.5em;
+  }
+}
