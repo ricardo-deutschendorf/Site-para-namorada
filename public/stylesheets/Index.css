@@ -1,5 +1,5 @@
 body {
-  background-color: #FFCCCB; /* Fundo rosa clarinho */
+  background: linear-gradient(to right, #FFCCCB, #FFB6C1); /* Fundo com gradiente rosa */
   padding: 20px;
   font-family: 'Arial', sans-serif; /* Fonte mais agradável */
   font-size: 16px; /* Tamanho da fonte */
@@ -10,12 +10,12 @@ body {
 h1 {
   font-size: 2em; /* Tamanho da fonte do título */
   font-weight: bold; /* Peso da fonte do título */
-  color: #444; /* Cor da fonte do título */
+  color: #030303; /* Cor da fonte do título */
 }
 
 p {
   font-size: 1.2em; /* Tamanho da fonte do parágrafo */
-  color: #555; /* Cor da fonte do parágrafo */
+  color: #252525; /* Cor da fonte do parágrafo */
 }
 
 a {
