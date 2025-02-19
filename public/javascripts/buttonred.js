@@ -4,8 +4,9 @@ document.getElementById('button2').addEventListener('click', function () {
   clickCount++;
 
   let button2 = document.getElementById('button2');
+  let questcontainer = document.getElementById('gif-container'); // Certifique-se de que o contêiner está definido
 
-  // Define a nova frase imediatamente
+  // Define uma nova frase imediatamente
   let newText = '';
   if (clickCount === 1) {
     newText = 'Tem certeza?';
@@ -16,7 +17,7 @@ document.getElementById('button2').addEventListener('click', function () {
   // Adiciona um delay de 1 segundo antes de aplicar a mudança
   setTimeout(function () {
     button2.innerText = newText;
-  }, 1);
+  }, 1000);
 
   let button1 = document.getElementById('button1');
 
@@ -29,8 +30,8 @@ document.getElementById('button2').addEventListener('click', function () {
   button2.style.position = 'fixed';
   button2.style.zIndex = -1; // Garante que o botão vermelho fique abaixo do botão verde
 
-  setTimeout(function (clickCount = 2) {
-    button2.style.zIndex = -2;
+  setTimeout(function () {
+    button2.style.zIndex = 2;
   }, 750);
 
   // Anima o GIF para descer devagarinho e ficar abaixo do botão verde
@@ -39,10 +40,11 @@ document.getElementById('button2').addEventListener('click', function () {
   gifContainer.style.transform = 'translateY(60px)'; // Ajuste a distância conforme necessário
   gifContainer.style.zIndex = 3; // Garante que o GIF fique abaixo do botão verde
 
-  // Move o botão vermelho lentamente para o lado
+  // Move o botão vermelho mais para o lado
   button2.style.transition = 'transform 1s ease-in-out';
   setTimeout(function () {
-    button2.style.transform = 'translateX(150%)'; // Move o botão vermelho para o lado
+    button2.style.transform = 'translateX(300%)'; // Move o botão vermelho mais para o lado
+    button2.style.zIndex = 6; // Garante que o botão vermelho fique acima do botão verde após mover
   }, 750);
 
   // Exibe a imagem emojiBrabo.webp na primeira vez que o botão vermelho for clicado
@@ -55,7 +57,7 @@ document.getElementById('button2').addEventListener('click', function () {
     emojiBrabo.style.left = '60%';
     emojiBrabo.style.transform = 'translate(-50%, -50%)';
     emojiBrabo.style.zIndex = '11';
-    emojiBrabo.style.width = '150px'; 
+    emojiBrabo.style.width = '150px';
     emojiBrabo.style.height = '150px';
     emojiBrabo.style.animation = 'swing 1s infinite';
     emojiBrabo.style.opacity = '0';
@@ -82,3 +84,15 @@ document.getElementById('button2').addEventListener('click', function () {
   `;
   document.head.appendChild(style);
 });
+
+// Adiciona o evento mouseover para teletransportar o botão vermelho
+if (clickCount >= 1) {
+document.getElementById('button2').addEventListener('mouseover', function () {
+  let button2 = document.getElementById('button2');
+  let questcontainer = document.getElementById('gif-container'); // Certifique-se de que o contêiner está definido
+
+  const buttonWidth = button2.offsetWidth;
+  const buttonHeight = button2.offsetHeight;
+  const containerWidth = questcontainer.offsetWidth;
+  const containerHeight = questcontainer.offsetHeight;  const NewX = Math.floor(Math.random() * (containerWidth - buttonWidth));  const NewY = Math.floor(Math.random() * (containerHeight - buttonHeight));  button2.style.left = NewX + "px";  button2.style.top = NewY + "px";});
+};
